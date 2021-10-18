@@ -16,7 +16,7 @@ module Jekyll
 
     def convert(content)
       RbST.executables = {:html => "#{File.expand_path(File.dirname(__FILE__))}/rst2html.py"}
-      RbST.new(content).to_html(:initial_header_level => 2)
+      RbST.new(content).to_html(:embed_stylesheet, :initial_header_level => 2)
     end
   end
 
