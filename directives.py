@@ -1,7 +1,7 @@
-# Define a new directive `code-block` (aliased as `sourcecode`) that uses the 
-# `pygments` source highlighter to render code in color. 
+# Define a new directive `code-block` (aliased as `sourcecode`) that uses the
+# `pygments` source highlighter to render code in color.
 #
-# Incorporates code from the `Pygments`_ documentation for `Using Pygments in 
+# Incorporates code from the `Pygments`_ documentation for `Using Pygments in
 # ReST documents`_ and `Octopress`_.
 #
 # .. _Pygments: http://pygments.org/

@@ -1,7 +1,7 @@
 Overview
 ========
 
-This plugin adds `ReStructuredText`_ support to `Jekyll`_ and `Octopress`_. 
+This plugin adds `ReStructuredText`_ support to `Jekyll`_ and `Octopress`_.
 It renders ReST in posts and pages, and provides a custom directive to
 support Octopress-compatible syntax highlighting.
 
@@ -16,7 +16,7 @@ Requirements
 Installation
 ============
 
-1. Install Docutils and Pygments. 
+1. Install Docutils and Pygments.
 
    The most convenient way is to use virtualenv_burrito:
 
@@ -29,8 +29,8 @@ Installation
 
 2. Install RbST.
 
-   If you use `bundler`_ with Octopress, add ``gem 'RbST'`` to 
-   your ``Gemfile`` in the ``development`` group, then run 
+   If you use `bundler`_ with Octopress, add ``gem 'RbST'`` to
+   your ``Gemfile`` in the ``development`` group, then run
    ``bundle install``. Otherwise, ``gem install RbST``.
 
 3. Install the plugin.
@@ -54,17 +54,17 @@ Installation
 
    .. note:: Be sure to activate the ``jekyll-rst`` virtualenv before generating
       the site by issuing a ``workon jekyll-rst``. I suggest you follow `Harry
-      Marr's advice`_ and create a ``.venv`` file that will  automatically 
+      Marr's advice`_ and create a ``.venv`` file that will  automatically
       activate the ``jekyll-rst`` virtualenv when you ``cd`` into your project.
 
 Source Code Highlighting
 ========================
 
-A ``code-block`` ReST directive is registered and aliased as ``sourcecode``. 
+A ``code-block`` ReST directive is registered and aliased as ``sourcecode``.
 It adds syntax highlighting to code blocks in your documents::
 
    .. code-block:: ruby
-      
+
       # Output "I love ReST"
       say = "I love ReST"
       puts say
@@ -86,12 +86,12 @@ need to generate one yourself if using Jekyll::
 Octopress Tips
 ==============
 
-* Use ``.. more`` in your ReST documents to indicate where Octopress's 
+* Use ``.. more`` in your ReST documents to indicate where Octopress's
   ``excerpt`` tag should split your content for summary views.
 
 .. _ReStructuredText: http://docutils.sourceforge.net/rst.html
 .. _Jekyll: http://jekyllrb.com/
-.. _Octopress: http://octopress.com/
+.. _Octopress: http://octopress.org/
 .. _RbST: http://rubygems.org/gems/RbST
 .. _bundler: http://gembundler.com/
 .. _Harry Marr's advice: http://hmarr.com/2010/jan/19/making-virtualenv-play-nice-with-git/
