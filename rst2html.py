@@ -15,7 +15,6 @@ except:
     pass
 
 from docutils.core import publish_cmdline, default_description
-from directives import Pygments
 
 description = ('Generates (X)HTML documents from standalone reStructuredText '
                'sources.  ' + default_description)
