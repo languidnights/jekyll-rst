@@ -89,9 +89,9 @@ Octopress Tips
 * Use ``.. more`` in your ReST documents to indicate where Octopress's
   ``excerpt`` tag should split your content for summary views.
 
-.. _ReStructuredText: http://docutils.sourceforge.net/rst.html
-.. _Jekyll: http://jekyllrb.com/
-.. _Octopress: http://octopress.org/
-.. _RbST: http://rubygems.org/gems/RbST
-.. _bundler: http://gembundler.com/
-.. _Harry Marr's advice: http://hmarr.com/2010/jan/19/making-virtualenv-play-nice-with-git/
+.. _ReStructuredText: https://docutils.sourceforge.io/rst.html
+.. _Jekyll: https://jekyllrb.com/
+.. _Octopress: https://octopress.org/
+.. _RbST: https://rubygems.org/gems/RbST
+.. _bundler: https://bundler.io/
+.. _Harry Marr's advice: https://hmarr.com/2010/jan/19/making-virtualenv-play-nice-with-git/
