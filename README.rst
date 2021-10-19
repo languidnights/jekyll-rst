@@ -89,6 +89,18 @@ Octopress Tips
 * Use ``.. more`` in your ReST documents to indicate where Octopress's
   ``excerpt`` tag should split your content for summary views.
 
+Restoring Default CSS
+=====================
+
+If you want to restore the default stylesheet for rst2html5, copy the
+math.css, miminal.css, and plain.css into your css folder and include
+them in the ``<head>`` of your _includes/head.html. For example, in my
+setup I have my css in <site_root>/assets/css/style.css. ::
+
+  <link rel="stylesheet" href="{{ "/assets/css/math.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/minimal.css" | relative_url }}">
+  <link rel="stylesheet" href="{{ "/assets/css/plain.css" | relative_url }}">
+
 Contributing
 ============
 
