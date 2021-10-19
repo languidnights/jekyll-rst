@@ -18,42 +18,40 @@ Installation
 
 1. Install Docutils and Pygments.
 
-   The most convenient way is to use virtualenv_burrito:
+   One convenient way is to use `venv`_ and `pip`_:
 
    ::
 
-      $ curl -s https://raw.github.com/brainsik/virtualenv-burrito/master/virtualenv-burrito.sh | bash
-      $ source /Users/xdissent/.venvburrito/startup.sh
-      $ mkvirtualenv jekyll-rst
-      $ pip install docutils pygments
+      $ python3 -m venv .
+      $ ./bin/pip install docutils pygments
+
+   You can also use your distibution's package manager if you're on a
+   linux install. For example, in Debian or Ubuntu, you can use apt ::
+
+     $ sudo apt install python3-docutils python3-pygments
+
+   or in Fedora ::
+
+     $ dnf install python-docutils python-pygments
 
 2. Install RbST.
 
-   If you use `bundler`_ with Octopress, add ``gem 'RbST'`` to
-   your ``Gemfile`` in the ``development`` group, then run
-   ``bundle install``. Otherwise, ``gem install RbST``.
+   If you use `bundler`_ add ``gem 'RbST'`` to your ``Gemfile`` in the
+   ``development`` group, then run ``bundle install``. Otherwise,
+   ``gem install RbST``.
 
 3. Install the plugin.
 
-   For Jekyll:
-
    ::
 
-      $ cd <jekyll-project-path>
-      $ git submodule add https://github.com/xdissent/jekyll-rst.git _plugins/jekyll-rst
-
-   For Octopress:
-
-   ::
-
-      $ cd <octopress-project-path>
-      $ git submodule add https://github.com/xdissent/jekyll-rst.git plugins/jekyll-rst
+      $ cd <site-directory>
+      $ git submodule add https://github.com/languidnights/jekyll-rst.git _plugins/jekyll-rst
 
 4. Start blogging in ReStructuredText. Any file with the ``.rst`` extension
    will be parsed as ReST and rendered into HTML.
 
    .. note:: Be sure to activate the ``jekyll-rst`` virtualenv before generating
-      the site by issuing a ``workon jekyll-rst``. I suggest you follow `Harry
+      the site by issuing a ``bash ./bin/activate``. I suggest you follow `Harry
       Marr's advice`_ and create a ``.venv`` file that will  automatically
       activate the ``jekyll-rst`` virtualenv when you ``cd`` into your project.
 
@@ -79,7 +77,7 @@ Optional arguments exist to supply a caption, link, and link title::
       $ curl http://news.ycombinator.com | less
 
 Octopress already includes style sheets for syntax highlighting, but you'll
-need to generate one yourself if using Jekyll::
+need to generate one yourself if using Jekyll ::
 
    $ pygmentize -S default -f html > css/pygments.css
 
@@ -95,3 +93,5 @@ Octopress Tips
 .. _RbST: https://rubygems.org/gems/RbST
 .. _bundler: https://bundler.io/
 .. _Harry Marr's advice: https://hmarr.com/2010/jan/19/making-virtualenv-play-nice-with-git/
+.. _venv: https://docs.python.org/3/library/venv.html
+.. _pip: https://docs.python.org/3/installing/index.html#installing-index
