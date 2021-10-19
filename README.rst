@@ -92,6 +92,11 @@ Octopress Tips
 Contributing
 ============
 
+I have only tested this fork on my personal websites. As the
+`original project`_ hasn't had development since 2013, so it is quite
+likely that things in the `Docutils`_ universe has changed since then,
+so I anticipate there to be issues for more complex setups. 
+
 If you have any issues, the best way to report them is through
 `Github Issues`_
 
@@ -99,6 +104,7 @@ If you want to contribute and are proficient in either Python or Ruby,
 then sending a `Pull request`_ is the best way to get your patch in
 front of our eyes.
 
+.. _original project: https://github.com/xdissent/jekyll-rst
 .. _ReStructuredText: https://docutils.sourceforge.io/rst.html
 .. _Jekyll: https://jekyllrb.com/
 .. _Octopress: https://octopress.org/
