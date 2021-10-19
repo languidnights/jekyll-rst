@@ -1,3 +1,5 @@
+.. contents:: Table of Contents
+
 Overview
 ========
 
@@ -5,14 +7,12 @@ This plugin adds `ReStructuredText`_ support to `Jekyll`_ and `Octopress`_.
 It renders ReST in posts and pages, and provides a custom directive to
 support Octopress-compatible syntax highlighting.
 
-.. contents::
-
 Requirements
 ============
 
-* Jekyll *or* Octopress >= 2.0
-* Docutils
-* Pygments
+* `Jekyll`_ *or* `Octopress`_ >= 2.0
+* `Docutils`_
+* `Pygments`_
 * `RbST`_
 
 Installation
@@ -102,6 +102,8 @@ front of our eyes.
 .. _ReStructuredText: https://docutils.sourceforge.io/rst.html
 .. _Jekyll: https://jekyllrb.com/
 .. _Octopress: https://octopress.org/
+.. _Docutils: https://pypi.org/project/docutils/
+.. _Pygments: https://pypi.org/project/Pygments/
 .. _RbST: https://rubygems.org/gems/RbST
 .. _bundler: https://bundler.io/
 .. _Harry Marr's advice: https://hmarr.com/2010/jan/19/making-virtualenv-play-nice-with-git/
