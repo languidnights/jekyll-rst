@@ -1,4 +1,5 @@
 .. contents:: Table of Contents
+   :backlinks: top
 
 Overview
 ========
@@ -24,8 +25,8 @@ Installation
 
    ::
 
-      $ python3 -m venv .
-      $ ./bin/pip install docutils pygments
+      $ python3 -m venv ${site_directory}/.venv
+      $ .venv/bin/pip install docutils pygments
 
    You can also use your distibution's package manager if you're on a
    linux install. For example, in Debian or Ubuntu, you can use apt ::
@@ -35,6 +36,11 @@ Installation
    or in Fedora, use dnf ::
 
      $ dnf install python-docutils python-pygments
+
+   From here on, we assume you have these installed and in your PATH
+   such that if you type ``command -v rst2html5`` and
+   ``command -v pygmentize`` you get a result indicating where it's
+   installed.
 
 2. Install RbST.
 
@@ -46,22 +52,26 @@ Installation
 
    ::
 
-      $ cd <site-directory>
-      $ git submodule add https://github.com/languidnights/jekyll-rst.git _plugins/jekyll-rst
+      $ cd ${site-directory}
+      $ git submodule add https://github.com/languidnights/jekyll-rst-ng.git _plugins/jekyll-rst
 
 4. Start blogging in ReStructuredText. Any file with the ``.rst`` extension
    will be parsed as ReST and rendered into HTML.
 
-   .. note:: Be sure to activate the ``jekyll-rst`` virtualenv before generating
-      the site by issuing a ``bash ./bin/activate``. I suggest you follow `Harry
-      Marr's advice`_ and create a ``.venv`` file that will  automatically
-      activate the ``jekyll-rst`` virtualenv when you ``cd`` into your project.
+   .. note:: If you installed Docutils and Pygments via virtualenv and
+   pip, be sure to activate the ``jekyll-rst`` virtualenv before
+   generating the site by issuing a
+   ``. ${site_directory}.vev/bin/activate``. I suggest you follow
+   `Harry Marr's advice`_ and create a ``.venv`` file that will
+   automatically activate the ``jekyll-rst`` virtualenv when you
+   ``cd`` into your project.
 
 Source Code Highlighting
 ========================
 
-A ``code-block`` ReST directive is registered and aliased as ``sourcecode``.
-It adds syntax highlighting to code blocks in your documents::
+A ``code-block`` ReST directive is registered and aliased as
+``sourcecode``.  It adds syntax highlighting to code blocks in your
+documents::
 
    .. code-block:: ruby
 
@@ -78,8 +88,8 @@ Optional arguments exist to supply a caption, link, and link title::
 
       $ curl http://news.ycombinator.com | less
 
-Octopress already includes style sheets for syntax highlighting, but you'll
-need to generate one yourself if using Jekyll ::
+Octopress already includes style sheets for syntax highlighting, but
+you'll need to generate one yourself if using Jekyll ::
 
    $ pygmentize -S default -f html > css/pygments.css
 
@@ -93,9 +103,12 @@ Restoring Default CSS
 =====================
 
 If you want to restore the default stylesheet for rst2html5, copy the
-math.css, miminal.css, and plain.css into your css folder and include
-them in the ``<head>`` of your _includes/head.html. For example, in my
-setup I have my css in <site_root>/assets/css/style.css. ::
+math.css, miminal.css, and plain.css from your
+${site_directory}/share/docutils/writers/" directory docutils into your
+css folder and include them in the ``<head>`` of your
+_includes/head.html. For example, in my setup I have my css in
+<site_root>/assets/css/style.css.
+::
 
   <link rel="stylesheet" href="{{ "/assets/css/math.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "/assets/css/minimal.css" | relative_url }}">
@@ -104,10 +117,10 @@ setup I have my css in <site_root>/assets/css/style.css. ::
 Contributing
 ============
 
-I have only tested this fork on my personal websites. As the
-`original project`_ hasn't had development since 2013, so it is quite
-likely that things in the `Docutils`_ universe has changed since then,
-so I anticipate there to be issues for more complex setups. 
+I have only tested this fork on my personal websites. As the `original
+project`_ hasn't had development since 2013, so things in the
+`Docutils`_ universe has changed since then, so I anticipate there to be
+issues for more complex setups.
 
 If you have any issues, the best way to report them is through
 `Github Issues`_
