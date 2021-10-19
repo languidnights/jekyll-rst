@@ -5,6 +5,8 @@ This plugin adds `ReStructuredText`_ support to `Jekyll`_ and `Octopress`_.
 It renders ReST in posts and pages, and provides a custom directive to
 support Octopress-compatible syntax highlighting.
 
+.. contents::
+
 Requirements
 ============
 
@@ -30,7 +32,7 @@ Installation
 
      $ sudo apt install python3-docutils python3-pygments
 
-   or in Fedora ::
+   or in Fedora, use dnf ::
 
      $ dnf install python-docutils python-pygments
 
@@ -87,6 +89,16 @@ Octopress Tips
 * Use ``.. more`` in your ReST documents to indicate where Octopress's
   ``excerpt`` tag should split your content for summary views.
 
+Contributing
+============
+
+If you have any issues, the best way to report them is through
+`Github Issues`_
+
+If you want to contribute and are proficient in either Python or Ruby,
+then sending a `Pull request`_ is the best way to get your patch in
+front of our eyes.
+
 .. _ReStructuredText: https://docutils.sourceforge.io/rst.html
 .. _Jekyll: https://jekyllrb.com/
 .. _Octopress: https://octopress.org/
@@ -95,3 +107,5 @@ Octopress Tips
 .. _Harry Marr's advice: https://hmarr.com/2010/jan/19/making-virtualenv-play-nice-with-git/
 .. _venv: https://docs.python.org/3/library/venv.html
 .. _pip: https://docs.python.org/3/installing/index.html#installing-index
+.. _Github Issues: https://github.com/languidnights/jekyll-rst/issues
+.. _Pull request: https://github.com/languidnights/jekyll-rst/pulls
