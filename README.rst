@@ -114,6 +114,14 @@ _includes/head.html. For example, in my setup I have my css in
   <link rel="stylesheet" href="{{ "/assets/css/minimal.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "/assets/css/plain.css" | relative_url }}">
 
+Known Limitations
+=================
+
+jekyll-rst only knows about the directives python-docutils'
+implementation of rst2html5 knows about. In Debian Stable, for example,
+the `:ref:` directive isn't known about by docutils, and so it isn't
+recognized here
+
 Contributing
 ============
 
