@@ -44,17 +44,17 @@ Installation
 
 2. Install the Plugin
 
-In your ${site_root}/Gemfile add the following line. ::
+   In your ${site_root}/Gemfile add the following line. ::
 
-    gem "jekyll_rst_ng", git: "https://github.com/languidnights/jekyll-rst-ng"
+      gem "jekyll_rst_ng", git: "https://github.com/languidnights/jekyll-rst-ng"
 
-In your ${site_root}/_config.yml add the folling line in the plugins
-definition. ::
-    plugins:
-      - jekyll_rst_ng
+   In your ${site_root}/_config.yml add the folling line in the plugins
+   definition. ::
+      plugins:
+         - jekyll_rst_ng
 
-Before you start blogging, issue a ``bundle install`` even if you
-installed jekyll and its plugins from your package manager.
+   Before you start blogging, issue a ``bundle install`` even if you
+   installed jekyll and its plugins from your package manager.
 
 3. Start blogging in ReStructuredText. Any file with the ``.rst`` extension
    will be parsed as ReST and rendered into HTML.
