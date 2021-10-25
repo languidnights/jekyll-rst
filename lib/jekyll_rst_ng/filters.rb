@@ -1,6 +1,10 @@
-require 'rbst'
+require "jekyll_rst_ng/version"
+require "rbst"
+require "jekyll"
 
 module Jekyll
+  class Error < StandardError; end
+
   class RestConverter < Converter
     safe true
 
