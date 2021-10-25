@@ -42,20 +42,21 @@ Installation
    ``command -v pygmentize`` you get a result indicating where it's
    installed.
 
-2. Install RbST.
+2. Install the Plugin
 
-   If you use `bundler`_ add ``gem 'RbST'`` to your ``Gemfile`` in the
-   ``development`` group, then run ``bundle install``. Otherwise,
-   ``gem install RbST``.
+    In your ${site_root}/Gemfile add the following line. ::
 
-3. Install the plugin.
+        gem "jekyll_rst_ng", git: "https://github.com/languidnights/jekyll-rst-ng"
 
-   ::
+    In your ${site_root}/_config.yml add the folling line in the plugins
+    definition. ::
+        plugins:
+          - jekyll_rst_ng
 
-      $ cd ${site-directory}
-      $ git submodule add https://github.com/languidnights/jekyll-rst-ng.git _plugins/jekyll-rst
+    Before you start blogging, issue a ``bundle install`` even if you
+    installed jekyll and its plugins from your package manager.
 
-4. Start blogging in ReStructuredText. Any file with the ``.rst`` extension
+3. Start blogging in ReStructuredText. Any file with the ``.rst`` extension
    will be parsed as ReST and rendered into HTML.
 
    .. note:: If you installed Docutils and Pygments via virtualenv and
