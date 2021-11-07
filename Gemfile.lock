@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    jekyll_rst_ng (2.0.0)
+    jekyll-rst_ng (2.1.0)
 
 GEM
   remote: https://rubygems.org/
@@ -84,7 +84,7 @@ PLATFORMS
 DEPENDENCIES
   RbST
   jekyll
-  jekyll_rst_ng!
+  jekyll-rst_ng!
   rake (~> 12.0)
   rspec (~> 3.2)
 
