@@ -8,7 +8,7 @@ require File.expand_path('rst_ng', File.dirname(__FILE__))
 
 module Jekyll
   module RstNg
-    module Jekyll::RestConverter
+    module RestConverter
   end
   end
 end
