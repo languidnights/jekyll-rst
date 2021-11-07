@@ -46,12 +46,12 @@ Installation
 
    In your ${site_root}/Gemfile add the following line. ::
 
-      gem "jekyll_rst_ng", git: "https://github.com/languidnights/jekyll-rst-ng"
+      gem "jekyll-rst_ng", git: "https://github.com/languidnights/jekyll-rst-ng", tag: "v2.1.1"
 
    In your ${site_root}/_config.yml add the folling line in the plugins
-   definition. ::
+   definition. Yes using a *slash* is the only way I can get it to work! ::
       plugins:
-         - jekyll_rst_ng
+         - jekyll/rst_ng
 
    Before you start blogging, issue a ``bundle install`` even if you
    installed jekyll and its plugins from your package manager.
