@@ -1,4 +1,4 @@
-require "jekyll_rst_ng/version"
+require "jekyll/rst_ng/version"
 require "rbst"
 require "jekyll"
 
@@ -19,14 +19,14 @@ module Jekyll
     end
 
     def convert(content)
-      RbST.new(content).to_html(:initial_header_level => 2, :stylesheet => "")
+      RbST.new(content).to_html(:initial_header_level => 2, :stylesheet => "", :syntax_highlight => "short")
     end
   end
 
   module Filters
     def restify(input)
       site = @context.registers[:site]
-      converter = site.getConverterImpl(Jekyll::RestConverter)
+      converter = site.getConverterImpl(JekyllRstConverter)
       converter.convert(input)
     end
   end
